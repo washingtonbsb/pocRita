@@ -1,11 +1,16 @@
-<form class="form-content-send-message">
+<form class="form-content-send-message" (ngSubmit)="sendForm()" [formGroup]="userForm" #formDir="ngForm">
+ 
+ 
   <div class="form-group">
     <div class="form-group-text">
       <p>Endereço</p>
       <span>Av. Paulista, 302</span>
     </div>
     <div>
-      <input type="text" placeholder="Seu nome" />
+      <input type="text" placeholder="Seu nome" formControlName="name" required />
+      <div class="form-warn-div" *ngIf="name.invalid && formDir.submitted">
+        <p *ngIf="name?.errors?.['required']">O campo Nome é obrigatório</p>
+      </div>
     </div>
   </div>
 
@@ -16,7 +21,10 @@
       <span>www.developer.com.br</span>
     </div>
     <div>
-      <input type="text" placeholder="Seu Email" />
+      <input type="email" placeholder="Seu Email" formControlName="mail" email />
+      <div class="form-warn-div" *ngIf=" formDir.submitted">
+        <p *ngIf="mail?.errors?.['pattern']">É necessário um Email válido</p>
+      </div>
     </div>
   </div>
 
@@ -26,7 +34,7 @@
       <span>developer@dev.com.br</span>
     </div>
     <div>
-      <input type="text" placeholder="Telefone" />
+      <input type="text" placeholder="Telefone " formControlName="phone"    mask="(00) 0 0000-0000" />
     </div>
   </div>
 
@@ -36,7 +44,10 @@
       <span>(11)2727-3030</span>
     </div>
     <div>
-      <textarea  placeholder="Seu nome"></textarea>
+      <textarea  placeholder="Sua Mensagem" formControlName="message" required></textarea>
+      <div class="form-warn-div" *ngIf="message.invalid && formDir.submitted">
+        <p *ngIf="message?.errors?.['required']">É necessário escrever uma mensagem</p>
+      </div>
     </div>
   </div>
 

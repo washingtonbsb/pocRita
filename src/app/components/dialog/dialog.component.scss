@@ -1,0 +1,15 @@
+.dialog-container{
+    height: 400px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  gap: 40px;
+  text-align: center;
+}
+
+.mat-mdc-raised-button:not(:disabled) {
+    background-color: #794040;
+    color: #fff;
+  }
