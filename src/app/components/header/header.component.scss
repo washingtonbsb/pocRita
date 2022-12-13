@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css?family=Advent+Pro');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+.container-header {
+  background-image: url("../../../assets/img/banner.jpeg");
+  height: 275px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.text-main-header{
+    height: 215px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Advent Pro', sans-serif;
+}
+
+.text-banner-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.768627451);
+    color: #481010;
+    padding: 0 40px;
+    width: 734px;
+    font-size: 36px;
+    font-weight: 300;
+}
+
+.nav-main-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #48101068;
+  height: 60px;
+  color: #fff;
+  font-family: 'Advent Pro', sans-serif;
+  align-items: center;
+  padding: 0 10px;
+
+  
+
+  a{
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+
+  }
+
+  div{
+    font-weight: bold;
+  }
+
+  div, nav  {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+ 
+
+    
+
+    
+  }
+}

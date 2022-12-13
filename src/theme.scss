@@ -1,4 +1,3 @@
-
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @use '@angular/material' as mat;
@@ -12,38 +11,24 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$RTHApp-primary: mat.define-palette(mat.$indigo-palette);
-$RTHApp-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$theme-primary: mat.define-palette(mat.$indigo-palette);
+$theme-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
-$RTHApp-warn: mat.define-palette(mat.$red-palette);
+$theme-warn: mat.define-palette(mat.$red-palette);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$RTHApp-theme: mat.define-light-theme((
+$theme: mat.define-light-theme((
   color: (
-    primary: $RTHApp-primary,
-    accent: $RTHApp-accent,
-    warn: $RTHApp-warn,
-  )
+    primary: $theme-primary,
+    accent: $theme-accent,
+    warn: $theme-warn,
+  ),
+  typography: mat.define-typography-config(),
 ));
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include mat.all-component-themes($RTHApp-theme);
-
-/* You can add global styles to this file, and also import other style files */
-*{
-box-sizing: border-box;
-padding: 0;
-margin: 0;
-}
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-.mat-mdc-raised-button:not(:disabled){
-  background-color: #481010;
-  color: #fff;
-}
-
+@include mat.all-component-themes($theme);

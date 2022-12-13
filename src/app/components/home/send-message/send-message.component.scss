@@ -1,0 +1,50 @@
+.form-content-send-message {
+
+
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+
+
+  .mat-mdc-raised-button:not(:disabled) {
+    background-color: #794040;
+    color: #fff;
+  }
+
+  .form-group{
+    display: flex;
+    justify-content: space-between;
+    width: 89%;
+    margin: 20px 0 20px 60px;
+  }
+
+  .form-group-text {
+
+    p {
+      color: #794040;
+    }
+    span {
+      font-size: 11px;
+    }
+  }
+
+  input, textarea{
+    height: 50px;
+    width: 300px;
+    padding: 5px;
+  }
+
+  .form-group-div-button{
+    width: 89%;
+    margin: 20px 0 20px 60px;
+    display: flex;
+    justify-content: flex-end;
+
+    button{
+        height: 50px;
+        width: 150px;
+    }
+  }
+}

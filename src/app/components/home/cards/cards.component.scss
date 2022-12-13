@@ -1,0 +1,50 @@
+
+
+
+
+.content-main-card {
+    max-width: 400px;
+
+
+    .mat-mdc-raised-button:not(:disabled){
+      background-color: #481010;
+      color: #fff;
+    }
+  
+  .content-main-card-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+
+  .mat-mdc-card-content{
+  margin: 10px;
+  
+  text-align: center;
+
+
+  p{
+    font-size: 20px;
+    font-weight: lighter;
+  }
+
+  span{
+    color: #481010;
+  }
+
+
+
+  }
+
+  .content-footer-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    button{
+      width: 80%;
+      height: 50px;
+      
+    }
+  }
+}

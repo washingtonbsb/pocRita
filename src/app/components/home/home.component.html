@@ -1,0 +1,17 @@
+
+<div>
+
+    <div class="container-main-home">
+    
+        <div class="main-card-" *ngFor="let user of dataUser">
+    
+            <app-cards
+            [description] = "user.description"
+            [image] = "user.image"
+            [professional]="user.professionalType"
+            
+            ></app-cards>
+        </div>
+    </div>
+    <app-send-message></app-send-message>
+</div>
