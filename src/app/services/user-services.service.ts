@@ -13,9 +13,7 @@ const httpOptions = {
   providedIn: 'root',
 })
 export class UserServicesService {
-  // private apiUrl = 'https://6397796577359127a0388e21.mockapi.io/api/v1/users';
-  private apiUrl = 'localhost:3000/';
-  // private apiUrl = 'http://api.github.com/users/';
+  private apiUrl = 'https://6397796577359127a0388e21.mockapi.io/api/v1/users';
 
   constructor(private http: HttpClient) {}
 
